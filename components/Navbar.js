@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
@@ -13,17 +12,26 @@ const Navbar = () => {
 
         <ul className="hidden md:flex items-center gap-8 text-base font-medium">
           <li>
-            <Link href="/" className="hover:text-green-200 transition-colors duration-200">
+            <Link
+              href="/"
+              className="hover:text-green-200 transition-colors duration-200"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-green-200 transition-colors duration-200">
+            <Link
+              href="/about"
+              className="hover:text-green-200 transition-colors duration-200"
+            >
               About
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-green-200 transition-colors duration-200">
+            <Link
+              href="/contact"
+              className="hover:text-green-200 transition-colors duration-200"
+            >
               Contact
             </Link>
           </li>
@@ -42,23 +50,31 @@ const Navbar = () => {
         </ul>
 
         {/* Hamburger menu */}
+        {/* Hamburger menu */}
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="focus:outline-none"
           >
             <svg
-              className="w-6 h-6 fill-current"
+              className="w-6 h-6"
               viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
               {isOpen ? (
                 <path
-                  fillRule="evenodd"
                   d="M6 18L18 6M6 6l12 12"
-                  clipRule="evenodd"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               )}
             </svg>
           </button>
@@ -82,7 +98,11 @@ const Navbar = () => {
               Try Now
             </button>
           </Link>
-          <Link href="https://github.com/your-repo" target="_blank" className="px-2">
+          <Link
+            href="https://github.com/your-repo"
+            target="_blank"
+            className="px-2"
+          >
             <button className="w-full border border-white py-2 rounded-lg hover:bg-white hover:text-green-600 transition">
               GitHub
             </button>
@@ -94,6 +114,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
